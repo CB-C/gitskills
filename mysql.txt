@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 面试问的问题:
 	1、联合查询 union 
 	select id,name fron table1
@@ -18,3 +19,31 @@
 	5、锁表
 	6、大量数据导入
 	7、不要在循环中使用sql查询语句
+=======
+数据库优化作为程序员在日常工作中的优化详情
+1、sql语句优化
+	1.Innerjoin和左连接，右连接，子查询
+	2.建立索引,加快查询性能
+	3.limit千万级分页的时候优化
+	4.尽量避免Select * 命令
+	5.尽量不要使用ORDER BY RAND()命令
+	6.利用limit 1取得唯一行
+	7.尽量少排序
+	8.尽量少OR,使用union all 
+	9.尽量用union all 代替union
+	10.避免类型转换
+	11.不要在列上进行运算
+	12.尽量不要使用NOT IN和<>操作
+	13.使用批量插入节省交互（最好是使用存储过程）
+	14. 锁定表
+	15.对多表关联的查询，建立视图
+
+
+2、explain语句执行计划
+	id select_type table 	type 				possible_keys key key_len ref rows Extra
+	1  查询类型    所用的表 重要的项,由高到低(system,const,eq_ref,ref,ref_or_null,index_merge...all)
+3、索引的创建和使用
+	主键索引 唯一索引 普通索引 全文索引
+4、是否启用缓存
+	redis memcache mongodb
+>>>>>>> 84d983f15e8671a5c4ac2f37217b2d5683818437
