@@ -1,0 +1,20 @@
+面试问的问题:
+	1、联合查询 union 
+	select id,name fron table1
+	union all(默认distanct)
+	select id,name from table1(table2)
+	2、mysql内部时间转换函数
+		from_unixtime()  时间戳转时间字符串
+		unix_timestamp() 时间字符串转时间戳
+	3、表的某个字段建立了索引，有没有可能索引并没有用到
+		1、索引字段的值用来运算就会失效
+		2、like '%name' 会失效 like左原则
+		3、select ... from table where name=?(无索引) and age=?(有索引) 失效
+		4、对于复合索引，要想走索引，必须复合索引最左侧的字段走索引
+		5、explain语句执行计划
+	4、innodb和myisam
+		MyISAM非非聚簇索引,聚簇索引(InnoDB)
+		线上一定要开启慢日志查询
+	5、锁表
+	6、大量数据导入
+	7、不要在循环中使用sql查询语句

@@ -1,0 +1,8 @@
+1、接口返回值规范
+	json object{
+		code:'1',
+		message: 'success',
+		data:{
+			数据
+		}
+	}
